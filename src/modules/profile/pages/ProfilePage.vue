@@ -15,9 +15,19 @@
 
     <h1>Profile</h1>
     <p>Welcome to your Profile!</p>
+    <div>
+      <q-btn @click="logout">Logout</q-btn>
+    </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
 import HeaderComponent from 'src/modules/common/components/HeaderComponent.vue';
+import { useAuthStore } from 'src/stores/auth';
+
+const authStore = useAuthStore();
+
+const logout = () => {
+  void authStore.logout();
+};
 </script>
