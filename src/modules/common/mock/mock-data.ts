@@ -55,3 +55,36 @@ export const workoutPreviewListByFolder = [
     ],
   },
 ];
+
+export const workoutSessionPreview = {
+  name: 'mi Name',
+  duration: '34',
+  volume: '22223',
+  exerciseList: [
+    {
+      img: 'L',
+      name: 'Pechito loco',
+    },
+    {
+      img: 'L',
+      name: 'Pechito loco',
+    },
+  ],
+};
+
+export const workoutArray = [workoutSessionPreview, workoutSessionPreview, workoutSessionPreview];
+
+export const series = [
+  {
+    name: 'series-1',
+    data: [30, 40, 45, 50, 49, 60, 70, 91],
+  },
+];
+export const options = {
+  chart: {
+    id: 'vuechart-example',
+  },
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+  },
+};

@@ -4,7 +4,7 @@
       <div class="flex column">
         <div class="flex row">
           <span class="col flex text-h10 text-bold">{{ name }}</span>
-          <BottomSheetButton :message="name" :actions="actions" />
+          <BottomSheetButton :message="name" :actions="actions" btn-icon="more_horiz" btn-text="" />
         </div>
         <span class="truncate-multi"> {{ exercisePreview }}</span>
       </div>
@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import BottomSheetButton from './BottomSheetButton.vue';
-import type { Action } from './BottomSheetButton.vue';
+import BottomSheetButton from '../../common/components/BottomSheetButton.vue';
+import type { Action } from '../../common/components/BottomSheetButton.vue';
 
 defineProps<{
   name: string;

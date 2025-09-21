@@ -51,7 +51,12 @@
               </q-item-section>
 
               <q-item-section side>
-                <BottomSheetButton :message="folder.folder" :actions="actions" />
+                <BottomSheetButton
+                  :message="folder.folder"
+                  :actions="actions"
+                  btnText=""
+                  btnIcon="more_horiz"
+                />
               </q-item-section>
             </q-item>
           </template>
@@ -74,28 +79,33 @@ import HeaderComponent from 'src/modules/common/components/HeaderComponent.vue';
 
 import WorkoutCard from '../components/WorkoutCard.vue';
 import { workoutPreviewListByFolder } from 'src/modules/common/mock/mock-data';
-import BottomSheetButton from '../components/BottomSheetButton.vue';
-import type { Action } from '../components/BottomSheetButton.vue';
+import BottomSheetButton from '../../common/components/BottomSheetButton.vue';
+import type { Action } from '../../common/components/BottomSheetButton.vue';
 
 const actions: Action[] = [
   {
-    label: 'Compartir Rutina',
+    label: 'Compartir Carpeta',
     icon: 'share',
     id: 'share',
   },
   {
-    label: 'Duplicar Rutina',
-    icon: 'content_copy',
-    id: 'duplicate',
+    label: 'Reordenar Carpetas',
+    icon: 'import_export',
+    id: 'reorder',
   },
   {
-    label: 'Editar Rutina',
+    label: 'Renombrar Carpeta',
     icon: 'edit',
-    id: 'edit',
+    id: 'rename',
   },
   {
-    label: 'Borrar Rutina',
-    icon: 'clear',
+    label: 'Agregar Nueva Rutina',
+    icon: 'add',
+    id: 'addWorkout',
+  },
+  {
+    label: 'Eliminar Carpeta',
+    icon: 'delete_forever',
     id: 'delete',
   },
 ];
