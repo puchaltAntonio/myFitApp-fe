@@ -1,5 +1,5 @@
 <template>
-  <q-btn flat round dense icon="more_horiz" @click.stop="show" />
+  <q-btn :label="props.btnText" no-caps flat round dense :icon="props.btnIcon" @click.stop="show" />
 </template>
 
 <script setup lang="ts">
@@ -16,6 +16,8 @@ export interface Action {
 const props = defineProps<{
   message: string;
   actions: Action[];
+  btnIcon: string;
+  btnText: string;
 }>();
 
 const show = () => {
